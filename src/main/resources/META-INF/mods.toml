@@ -1,0 +1,19 @@
+modLoader = "javafml"
+loaderVersion = "*"
+license = "MPL-2.0"
+issueTrackerURL="https://github.com/Qendolin/peaceful-nights/issues/new"
+
+[[mods]]
+modId = "peaceful_night"
+version = "${version}"
+displayName = "${name}"
+authors = "Qendolin"
+description = "Prevent mobs from spawning on the surface during nights and thunderstorms"
+logoFile = "assets/peaceful_night/icon.png"
+logoBlur = false
+
+[[mixins]]
+config = "peaceful_night-common.mixins.json"
+
+[[mixins]]
+config = "peaceful_night-neoforge.mixins.json"

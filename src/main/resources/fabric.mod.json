@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "${id}",
+  "version": "${version}",
+  "name": "${name}",
+  "description": "Prevent mobs from spawning on the surface during nights and thunderstorms",
+  "authors": [
+    "Qendolin"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Qendolin/peaceful-nights",
+    "sources": "https://github.com/Qendolin/peaceful-nights",
+    "issues": "https://github.com/Qendolin/peaceful-nights/issues/new"
+  },
+  "license": "MPL-2.0",
+  "icon": "assets/peaceful_night/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.qendolin.peacefulnight.platforms.fabric.PeacefulNightFabric"
+    ]
+  },
+  "mixins": [
+    "peaceful_night-common.mixins.json",
+    "peaceful_night-fabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15",
+    "minecraft": "${minecraft}",
+    "fabric": "*"
+  }
+}

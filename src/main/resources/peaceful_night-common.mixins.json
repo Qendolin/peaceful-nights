@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.qendolin.peacefulnight.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "MonsterMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
