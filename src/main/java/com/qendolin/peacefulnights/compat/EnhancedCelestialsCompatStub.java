@@ -1,4 +1,4 @@
-package com.qendolin.peacefulnight.compat;
+package com.qendolin.peacefulnights.compat;
 
 import net.minecraft.world.level.ServerLevelAccessor;
 

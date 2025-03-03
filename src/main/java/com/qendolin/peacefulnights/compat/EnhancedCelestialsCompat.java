@@ -1,11 +1,11 @@
-package com.qendolin.peacefulnight.compat;
+package com.qendolin.peacefulnights.compat;
 
-import com.qendolin.peacefulnight.PeacefulNightInit;
+import com.qendolin.peacefulnights.PeacefulNightsInit;
 import net.minecraft.world.level.ServerLevelAccessor;
 
 public abstract class EnhancedCelestialsCompat {
 
-    public static final boolean IS_LOADED = PeacefulNightInit.PLATFORM.isModLoaded("enhancedcelestials");
+    public static final boolean IS_LOADED = PeacefulNightsInit.PLATFORM.isModLoaded("enhancedcelestials");
 
     private static EnhancedCelestialsCompat instance;
 

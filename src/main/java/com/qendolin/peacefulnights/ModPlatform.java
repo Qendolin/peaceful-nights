@@ -1,4 +1,4 @@
-package com.qendolin.peacefulnight;
+package com.qendolin.peacefulnights;
 
 
 /**

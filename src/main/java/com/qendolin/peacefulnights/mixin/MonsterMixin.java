@@ -1,9 +1,9 @@
-package com.qendolin.peacefulnight.mixin;
+package com.qendolin.peacefulnights.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import com.qendolin.peacefulnight.PeacefulNightGameRules;
-import com.qendolin.peacefulnight.compat.EnhancedCelestialsCompat;
+import com.qendolin.peacefulnights.PeacefulNightsGameRules;
+import com.qendolin.peacefulnights.compat.EnhancedCelestialsCompat;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.EntityType;
@@ -23,20 +23,20 @@ public class MonsterMixin {
     @Unique
     @Redirect(method = "isDarkEnoughToSpawn", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/ServerLevelAccessor;getMaxLocalRawBrightness(Lnet/minecraft/core/BlockPos;)I"))
     private static int onGetMaxLocalRawBrightness(ServerLevelAccessor level, BlockPos blockPos) {
-        return peacefulnight$getMaxLocalRawBrightnessOverride(level, blockPos, null);
+        return peacefulnights$getMaxLocalRawBrightnessOverride(level, blockPos, null);
     }
 
     @Unique
     @Redirect(method = "isDarkEnoughToSpawn", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/ServerLevelAccessor;getMaxLocalRawBrightness(Lnet/minecraft/core/BlockPos;I)I"))
     private static int onGetMaxLocalRawBrightness(ServerLevelAccessor level, BlockPos blockPos, int amount) {
-        return peacefulnight$getMaxLocalRawBrightnessOverride(level, blockPos, amount);
+        return peacefulnights$getMaxLocalRawBrightnessOverride(level, blockPos, amount);
     }
 
     @Unique
-    private static int peacefulnight$getMaxLocalRawBrightnessOverride(ServerLevelAccessor level, BlockPos blockPos, Integer amount) {
+    private static int peacefulnights$getMaxLocalRawBrightnessOverride(ServerLevelAccessor level, BlockPos blockPos, Integer amount) {
         EntityType<? extends Monster> type = typeArg.get();
         boolean override = true;
-        override &= !level.getLevel().getGameRules().getBoolean(PeacefulNightGameRules.DO_SURFACE_SPAWNING);
+        override &= !level.getLevel().getGameRules().getBoolean(PeacefulNightsGameRules.DO_SURFACE_SPAWNING);
         override &= level.dimensionType().hasSkyLight();
         override &= !EnhancedCelestialsCompat.instance().isBloodMoon(level);
         if (type != null) {

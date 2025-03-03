@@ -29,4 +29,4 @@ stonecutter {
     create(rootProject)
 }
 
-rootProject.name = "PeacefulNight"
+rootProject.name = "PeacefulNights"

@@ -1,4 +1,4 @@
-package com.qendolin.peacefulnight;
+package com.qendolin.peacefulnights;
 
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;

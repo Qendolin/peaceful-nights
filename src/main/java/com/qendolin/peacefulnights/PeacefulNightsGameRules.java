@@ -1,8 +1,8 @@
-package com.qendolin.peacefulnight;
+package com.qendolin.peacefulnights;
 
 import net.minecraft.world.level.GameRules;
 
-public class PeacefulNightGameRules {
+public class PeacefulNightsGameRules {
 
     public static void init() {
     }

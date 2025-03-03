@@ -45,7 +45,7 @@ repositories {
 loom {
     silentMojangMappingsLicense()
 
-    accessWidenerPath = rootProject.file("src/main/resources/peaceful_night.accesswidener")
+    accessWidenerPath = rootProject.file("src/main/resources/peaceful_nights.accesswidener")
 
     decompilers {
         get("vineflower").apply { // Adds names to lambdas - useful for mixins
@@ -54,8 +54,8 @@ loom {
     }
     if (loader == "forge") {
         forge.mixinConfigs(
-            "peaceful_night-common.mixins.json",
-            "peaceful_night-forge.mixins.json",
+            "peaceful_nights-common.mixins.json",
+            "peaceful_nights-forge.mixins.json",
         )
     }
 
@@ -113,6 +113,7 @@ publishMods {
     displayName = "${mod.name} ${loader.replaceFirstChar { it.uppercase() }} ${property("mod.mc_title")}-${mod.version}"
     version = mod.version
     type = BETA
+    changelog = ""
 
     modLoaders.add(loader)
 
