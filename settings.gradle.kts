@@ -21,9 +21,9 @@ stonecutter {
         fun mc(loader: String, vararg versions: String) {
             for (version in versions) vers("$version-$loader", version)
         }
-        mc("fabric","1.21.4", "1.21.1", "1.20.4", "1.20.1")
+        mc("fabric","1.21.5", "1.21.4", "1.21.1", "1.20.4", "1.20.1")
         //WARNING: neoforge uses mods.toml instead of neoforge.mods.toml for versions 1.20.4 (?) and earlier
-        mc("neoforge", "1.21.4", "1.21.1", "1.20.4")
+        mc("neoforge", "1.21.5", "1.21.4", "1.21.1", "1.20.4")
         mc("forge","1.20.1")
     }
     create(rootProject)

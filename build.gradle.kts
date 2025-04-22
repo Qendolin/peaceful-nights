@@ -189,6 +189,11 @@ if (stonecutter.current.isActive) {
         group = "project"
         dependsOn(tasks.named("genSources"))
     }
+
+    rootProject.tasks.register("publishModsActive") {
+        group = "project"
+        dependsOn(tasks.named("publishMods"))
+    }
 }
 
 tasks.processResources {
